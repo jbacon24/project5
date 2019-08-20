@@ -1,0 +1,36 @@
+<html>
+<head>
+            <meta name="google-site-verification" content="mvF46HUkBkcHptqKwpPrn5HTuZAAhCa8W0Rm7zkE7CY" />
+            <title>Beauty Products App</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+<body>
+
+<h1>New Beauty Item</h1>
+
+<div class = 'pane'>
+<form action="{{ url_for('newBeautyItem', beauty_id=beauty_id )}}" method = 'post'>
+
+<dl>
+	<dt>Name:</dt>
+		<dd><input type ='text' size='30' name='name' required></dd>
+            <dt>Description:</dt>
+                        <dd><textarea name = 'description' rows='5' cols='40' required></textarea></dd>
+            <dt>Price:</dt>
+                        <dd><input type = 'text' size = '8' name='price' required></dd>
+            <dt>Feature:</dt>
+                        <dd><input type = 'text' size = '30' name='feature' required></dd>
+                  </dl>
+
+
+<input type='submit' value='Create'>
+
+</form>
+</div>
+
+</body>
+
+
+
+
+</html>
